@@ -1,0 +1,582 @@
+/*Madiha Sadaf
+Website name: Explore Odyssey*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 2600px;
+    margin: 0;
+    font-family: 'Fondamento', helvetica, cursive;
+    font-size: calc(14px + (24 - 14) * (100vw - 300px) / (1600-300));
+      /* set up body so that it's a flex container with min-height of the viewport height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main.Home {
+    background-color: #8b856cb0;
+}
+
+header {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    background-image: url("../Images/jachan-devol-xY_6ZENqcfo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header div {
+    align-self: center;
+    min-width: 50%;
+    padding: 15px;
+    margin: 10px;
+    color: #166140;
+    font-weight: bold;
+    background-color: #dedba7;
+    border-radius: 4px 50px 4px 50px;
+    animation: color-change 6s infinite, party 4s;
+    z-index: 110;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: rgba(189, 224, 106, 0.85);
+    }
+
+    25% {
+        background-color: rgba(144, 194, 110, 0.85);
+    }
+
+    75% {
+        background-color: rgba(153, 233, 99, 0.85);
+    }
+
+    100% {
+        background-color: rgba(163, 233, 120, 0.85);
+    }
+
+}
+
+@keyframes party {
+    0% {
+        left: 300px;
+        height: 300px;
+        width: 300px;
+        font-size: 1em;
+        transform: scale(1,1);
+    }
+
+    25% {
+        left: -400px;
+        height: 90%;
+        width: 90%;
+    }
+
+    75% {
+        left: 200px;
+        height: 50%;
+        width: 50%;
+    }
+
+    100% {
+        left: 0px;
+        height: auto;
+        width: auto;
+    }
+
+}
+
+
+.logo {
+    display: inline-block;
+    margin-left: -.10em;
+    color: #4d4988;
+}
+
+.logo2 {
+    display: inline-block;
+    color: #4d4988;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.navbar a:hover {
+    background-color: red;
+  }
+  
+.navbar a.current {
+    background-color: red;
+  }
+
+.navbar a:active {
+    background-color: rgb(246, 94, 17);
+  }
+
+.Home {
+    padding: 15px;
+}
+
+.footer {
+    font-size: 0.8em;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(131, 129, 129);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    main {
+        padding-bottom: 60px;
+    }
+
+    nav.row {
+        flex-direction: row;
+    }
+
+    header {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav.row {
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    header {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+  }
+
+
+/* Split the screen in half */
+.split {
+    height: 100%;
+    /* width: 50%; position: absolute; not needed - used flexbox instead */
+    flex: 1;
+    /* make left and right the same width */
+    padding-top: 20px;
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  
+  /* Hide from Chrome, Safari, and Opera */
+  .split ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Control the left side */
+  .left {
+    /* height: 50%;  we've set the parent as a flex container so these are not needed 
+    width: 50%; */
+    /* left: 0; this doesn't do anything as this is statically positioned so I've removed it*/
+    background-color: #A97D5D;
+  }
+  
+  /* Control the right side */
+  .right {
+    /* height: 50%; we've set the parent as a flex container so these are not needed
+    width: 50%; */
+    background-color: #5C755E;
+  }
+  
+  /* If you want the content centered horizontally and vertically use grid. Loads easier */
+  .centered {
+    /* position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; */
+  
+    /* to center the contents, this is much better */
+    display: grid;
+    place-items: center;
+  }
+  
+  .holidays {
+    background-color: #9C9F84;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .festivals {
+    background-color: #F7DCB4;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .holidays th,
+  .holidays td {
+    border: 3px solid #5C755E;
+    padding: 2px 9px 2px 9px;
+    width: 600px;
+    text-align: center;
+  }
+  
+  .holidays th {
+    text-transform: uppercase;
+    text-align: center;
+    /*padding-top: 5px;
+    padding-bottom: 4px;*/
+    background: linear-gradient(to bottom, #d0e17ac0, #f75555);
+  }
+
+.holidays tr:hover {
+    background-color: #F7DCB4;
+}
+
+.festivals th,
+.festivals td {
+  border: 3px solid #A97D5D;
+  padding: 2px 9px 2px 9px;
+  width: 600px;
+  text-align: center;
+}
+
+.festivals th {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background: linear-gradient(to bottom, #d0e17ac0, #f75555);
+}
+
+.festivals tr:hover {
+    background-color: #9C9F84;
+}
+
+.container {
+    /* min-height: 100vh; 
+    position: relative; */
+  
+    /*flex-grow: 1;   make this expand to fill the height of the container */
+    display: flex; /* make this a flex container so we can place the .split elements side by side */
+    /*background-color: lightskyblue;  shows that this fills the screen to the bottom of the container. */
+  }
+  
+  /*.Home {
+    flex-grow: 1; /* make this expand the up to min-height */
+    /* make this a flex container so that the .container div expands to fill this */
+    /*display: flex;
+    flex-direction: column;
+  }*/
+
+  /*Eid-ul-Fitr*/
+.Eid-ul-Fitr {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Eid-al-Adha*/
+.Eid-al-Adha {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Diwali.html*/
+.Diwali {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Lohri.html*/
+.Lohri {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Maha.html*/
+.Maha {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Puja.html*/
+.Puja {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Holi.html*/
+.Holi {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Rava.html*/
+.Rava {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Raksha.html*/
+.Raksha {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Krishna.html*/
+.Krishna {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Ganesh.html*/
+.Ganesh {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Navaratri.html*/
+.Navaratri {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Dassehra.html*/
+.Dassehra {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Karva.html*/
+.Karva {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Ramadan.html*/
+.Ramadan {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Independence.html*/
+.Independence {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Labor.html*/
+.Labor {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Fool.html*/
+.Fool {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Black.html*/
+.Black {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Cinco.html*/
+.Cinco {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Constitutional.html*/
+.Constitutional {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Earth.html*/
+.Earth {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Easter.html*/
+.Easter {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Father.html*/
+.Father {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Halloween.html*/
+.Halloween {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Hanukkah.html*/
+.Hanukkah {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Martin.html*/
+.Martin {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Memorial.html*/
+.Memorial {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Mother.html*/
+.Mother {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*New.html*/
+.New {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*President.html*/
+.President {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Patrick.html*/
+.Patrick {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Thanksgiving.html*/
+.Thanks {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Valentine.html*/
+.Valentine {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Veterans.html*/
+.Veteran {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Women.html*/
+.Women {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Chinese.html*/
+.Chinese {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Christmas.html*/
+.Christmas {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Dead.html*/
+.Dead {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Glastonbury.html*/
+.Glastonbury {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Kwanzaa.html*/
+.Kwanzaa {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*La.html*/
+.La {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Mardi.html*/
+.Mardi {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Oktoberfest.html*/
+.Oktoberfest {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
+
+/*Songkran.html*/
+.Song {
+  background-color: #8b856cb0;
+  padding: 15px;
+}
